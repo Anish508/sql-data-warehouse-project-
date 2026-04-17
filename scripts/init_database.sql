@@ -1,4 +1,43 @@
 -- =====================================================
+-- Create Database and Schemas
+-- =====================================================
+
+-- Purpose:
+-- This script initializes the Data Warehouse environment
+-- by creating a dedicated database and organizing it into
+-- multiple schema layers based on the medallion architecture.
+--
+-- The DataWarehouse database acts as the central storage
+-- for all data.
+--
+-- The bronze schema is used for raw, unprocessed data ingestion.
+-- The silver schema stores cleaned and transformed data.
+-- The gold schema contains aggregated, business-ready data
+-- for reporting and analytics.
+--
+-- This layered approach improves data quality, maintainability,
+-- and query performance.
+
+-- Warning:
+-- This script is designed for SQL Server and uses system views
+-- like sys.databases and sys.schemas.
+--
+-- Ensure you have sufficient permissions to create databases
+-- and schemas.
+--
+-- Running the script without proper checks may result in errors
+-- if the database or schemas already exist (handled here using
+-- IF NOT EXISTS).
+--
+-- Avoid modifying or dropping schemas in production environments
+-- without proper backups.
+--
+-- Always validate naming conventions and environment settings
+-- before execution.
+
+-- =====================================================
+
+-- =====================================================
 -- Data Warehouse Initialization Script
 -- =====================================================
 
